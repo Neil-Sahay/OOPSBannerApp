@@ -1,46 +1,69 @@
+/**
+ * OOPSBannerApp UC3 – OOPS Banner Application (Use Case 3)
+ *
+ * This class extends UC2 by using String.join() to construct each line of the "OOPS" banner.
+ * It improves memory efficiency by reducing intermediate String objects compared to the + operator.
+ *
+ * @author Neil-Sahay
+ * @version 3.0
+ */
 public class OOPSBannerApp {
+
     public static void main(String[] args) {
-        System.out.println(
-            " ******* " + " " +
-            " ******* " + " " +
-            " ******* " + " " +
+        // Row 0
+        System.out.println(String.join(" ",
+            " ******* ",
+            " ******* ",
+            " ******* ",
             " ******* "
-        );
-        System.out.println(
-            "*       *" + " " +
-            "*       *" + " " +
-            "*       *" + " " +
+        ));
+
+        // Row 1
+        System.out.println(String.join(" ",
+            "*       *",
+            "*       *",
+            "*       *",
             "*       *"
-        );
-        System.out.println(
-            "*       *" + " " +
-            "*       *" + " " +
-            "*       *" + " " +
+        ));
+
+        // Row 2
+        System.out.println(String.join(" ",
+            "*       *",
+            "*       *",
+            "*       *",
             "*        "
-        );
-        System.out.println(
-            "*       *" + " " +
-            "*       *" + " " +
-            " ******* " + " " +
+        ));
+
+        // Row 3
+        System.out.println(String.join(" ",
+            "*       *",
+            "*       *",
+            " ******* ",
             " ******* "
-        );
-        System.out.println(
-            "*       *" + " " +
-            "*       *" + " " +
-            "*        " + " " +
+        ));
+
+        // Row 4
+        System.out.println(String.join(" ",
+            "*       *",
+            "*       *",
+            "*        ",
             "        *"
-        );
-        System.out.println(
-            "*       *" + " " +
-            "*       *" + " " +
-            "*        " + " " +
+        ));
+
+        // Row 5
+        System.out.println(String.join(" ",
+            "*       *",
+            "*       *",
+            "*        ",
             "*       *"
-        );
-        System.out.println(
-            " ******* " + " " +
-            " ******* " + " " +
-            "*        " + " " +
+        ));
+
+        // Row 6
+        System.out.println(String.join(" ",
+            " ******* ",
+            " ******* ",
+            "*        ",
             " ******* "
-        );
+        ));
     }
 }
