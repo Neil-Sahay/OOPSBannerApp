@@ -1,69 +1,56 @@
-/**
- * OOPSBannerApp UC3 – OOPS Banner Application (Use Case 3)
- *
- * This class extends UC2 by using String.join() to construct each line of the "OOPS" banner.
- * It improves memory efficiency by reducing intermediate String objects compared to the + operator.
- *
- * @author Neil-Sahay
- * @version 3.0
+/*
+ * OOPSBannerApp UC5 – Render OOPS as Banner using Inline Array Initialization
  */
+
 public class OOPSBannerApp {
-
     public static void main(String[] args) {
-        // Row 0
-        System.out.println(String.join(" ",
-            " ******* ",
-            " ******* ",
-            " ******* ",
-            " ******* "
-        ));
+        // Letter O pattern
+        String[] O = {
+            " *** ",
+            "*   *",
+            "*   *",
+            "*   *",
+            "*   *",
+            "*   *",
+            " *** "
+        };
 
-        // Row 1
-        System.out.println(String.join(" ",
-            "*       *",
-            "*       *",
-            "*       *",
-            "*       *"
-        ));
+        // Letter P pattern
+        String[] P = {
+            "*****",
+            "*   *",
+            "*   *",
+            "*****",
+            "*    ",
+            "*    ",
+            "*    "
+        };
 
-        // Row 2
-        System.out.println(String.join(" ",
-            "*       *",
-            "*       *",
-            "*       *",
-            "*        "
-        ));
+        // Letter S pattern
+        String[] S = {
+            " ****",
+            "*    ",
+            "*    ",
+            " ****",
+            "    *",
+            "    *",
+            "**** "
+        };
 
-        // Row 3
-        System.out.println(String.join(" ",
-            "*       *",
-            "*       *",
-            " ******* ",
-            " ******* "
-        ));
+        // Inline array initialization – each line built with String.join()
+        String[] bannerLines = {
+            String.join(" ", O[0], O[0], P[0], S[0]),
+            String.join(" ", O[1], O[1], P[1], S[1]),
+            String.join(" ", O[2], O[2], P[2], S[2]),
+            String.join(" ", O[3], O[3], P[3], S[3]),
+            String.join(" ", O[4], O[4], P[4], S[4]),
+            String.join(" ", O[5], O[5], P[5], S[5]),
+            String.join(" ", O[6], O[6], P[6], S[6])
+        };
 
-        // Row 4
-        System.out.println(String.join(" ",
-            "*       *",
-            "*       *",
-            "*        ",
-            "        *"
-        ));
-
-        // Row 5
-        System.out.println(String.join(" ",
-            "*       *",
-            "*       *",
-            "*        ",
-            "*       *"
-        ));
-
-        // Row 6
-        System.out.println(String.join(" ",
-            " ******* ",
-            " ******* ",
-            "*        ",
-            " ******* "
-        ));
+        // Print using enhanced for loop
+        for (String line : bannerLines) {
+            System.out.println(line);
+        }
     }
 }
